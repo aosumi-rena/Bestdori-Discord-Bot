@@ -359,4 +359,4 @@ Please ensure that any new text keys are added to every `textmap_<LANG>.json` to
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [GPL 3.0](LICENSE).
