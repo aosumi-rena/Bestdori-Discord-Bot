@@ -1,0 +1,42 @@
+{
+  "card": {
+    "USAGE": "カードIDを提供してください | 使い方：`^card <カードID>`",
+    "EMBED_TITLE": "カード #{CARD_ID}",
+    "FIELD_TITLE": "タイトル",
+    "FIELD_CHARACTER": "キャラクター",
+    "NOT_FOUND": "IDが{CARD_ID}のカードは存在しません。",
+    "ERROR": "カード情報の取得中にエラーが発生しました。後ほどお試しください\n{ERROR}"
+  },
+  "character": {
+    "USAGE": "キャラクターIDを提供してください | 使い方：`^char <キャラクターID>`",
+    "EMBED_TITLE": "キャラクター #{CHAR_ID}：{NAME}",
+    "FIELD_BAND": "バンド",
+    "NOT_FOUND": "IDが{CHAR_ID}のキャラクターは存在しません。",
+    "ERROR": "キャラクター情報の取得中にエラーが発生しました\n{ERROR}"
+  },
+  "help": {
+    "EMBED_TITLE": "ボットコマンド",
+    "EMBED_DESCRIPTION": "使用可能なコマンド一覧：",
+    "CARD_FIELD_NAME": "^card <ID>",
+    "CARD_FIELD_DESC": "カード情報を表示します。",
+    "CHAR_FIELD_NAME": "^char <ID>",
+    "CHAR_FIELD_DESC": "キャラクタープロフィールを表示します。",
+    "EVENT_FIELD_NAME": "^event <ID>",
+    "EVENT_FIELD_DESC": "イベント情報を表示します。",
+    "GACHA_FIELD_NAME": "^gacha <ID>",
+    "GACHA_FIELD_DESC": "ガチャ情報を表示します。",
+    "SONG_FIELD_NAME": "^song <ID>",
+    "SONG_FIELD_DESC": "楽曲情報を表示します。",
+    "HELP_FIELD_NAME": "^help",
+    "HELP_FIELD_DESC": "このヘルプメッセージを表示します。",
+    "LANG_FIELD_NAME": "/lang",
+    "LANG_FIELD_DESC": "このボットの操作および取得情報の言語を設定します。",
+    "FOOTER": "バージョン: {VERSION}\n日本語のテキストはAIによって生成されます。"
+  },
+  "lang": {
+    "NO_ADMIN": "❌ このサーバーの言語を変更するにはサーバー管理者権限が必要です。\n-# 別の言語を使用したい場合はDMをご利用ください。",
+    "CONFIRM_GUILD": "✅ サーバーの言語が**{LANG}**に更新されました。",
+    "CONFIRM_USER": "✅ あなたの言語設定が**{LANG}**に設定されました。",
+    "UNKNOWN_ERROR": "❌ 不明なエラーが発生しました。後ほどお試しください。"
+  }
+}

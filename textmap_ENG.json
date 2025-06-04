@@ -1,0 +1,42 @@
+{
+  "card": {
+    "USAGE": "Please provide a card ID | Usage: `^card <cardID>`",
+    "EMBED_TITLE": "Card #{CARD_ID}",
+    "FIELD_TITLE": "Title",
+    "FIELD_CHARACTER": "Character",
+    "NOT_FOUND": "Card with ID {CARD_ID} does not exist.",
+    "ERROR": "Error fetching card data, please try again later\n{ERROR}"
+  },
+  "character": {
+    "USAGE": "Please provide a character ID | Usage: `^char <charID>`",
+    "EMBED_TITLE": "Character #{CHAR_ID}: {NAME}",
+    "FIELD_BAND": "Band",
+    "NOT_FOUND": "Character with ID {CHAR_ID} does not exist.",
+    "ERROR": "Error fetching char data: {ERROR}"
+  },
+  "help": {
+    "EMBED_TITLE": "Bot Commands",
+    "EMBED_DESCRIPTION": "Here are the commands you can use:",
+    "CARD_FIELD_NAME": "^card <ID>",
+    "CARD_FIELD_DESC": "Show card information.",
+    "CHAR_FIELD_NAME": "^char <ID>",
+    "CHAR_FIELD_DESC": "Show character profile.",
+    "EVENT_FIELD_NAME": "^event <ID>",
+    "EVENT_FIELD_DESC": "Show event information.",
+    "GACHA_FIELD_NAME": "^gacha <ID>",
+    "GACHA_FIELD_DESC": "Show gacha information.",
+    "SONG_FIELD_NAME": "^song <ID>",
+    "SONG_FIELD_DESC": "Show song information.",
+    "HELP_FIELD_NAME": "^help",
+    "HELP_FIELD_DESC": "Show this help message.",
+    "LANG_FIELD_NAME": "/lang",
+    "LANG_FIELD_DESC": "Set the language of interaction **AND** the information retrieved by this bot.",
+    "FOOTER": "Version: {VERSION}"
+  },
+  "lang": {
+    "NO_ADMIN": "❌ You need to be a server administrator to change the bot's language for this server.\n-# You may use DM if you would like to use another language now.",
+    "CONFIRM_GUILD": "✅ Server language has been updated to **{LANG}**.",
+    "CONFIRM_USER": "✅ Your preferred language has been set to **{LANG}**.",
+    "UNKNOWN_ERROR": "❌ An unknown error occurred, try again later."
+  }
+}

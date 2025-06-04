@@ -1,0 +1,42 @@
+{
+  "card": {
+    "USAGE": "請提供卡面ID | 用法：`^card <卡面ID>`",
+    "EMBED_TITLE": "卡面 #{CARD_ID}",
+    "FIELD_TITLE": "標題",
+    "FIELD_CHARACTER": "角色",
+    "NOT_FOUND": "ID為{CARD_ID}的卡面不存在！",
+    "ERROR": "獲取卡面資訊時出錯，請稍後再試\n{ERROR}"
+  },
+  "character": {
+    "USAGE": "請提供角色ID | 用法：`^char <角色ID>`",
+    "EMBED_TITLE": "角色 #{CHAR_ID}：{NAME}",
+    "FIELD_BAND": "所屬樂團",
+    "NOT_FOUND": "ID為{CHAR_ID}的角色不存在！",
+    "ERROR": "獲取角色資訊時出錯，請稍後再試\n{ERROR}"
+  },
+  "help": {
+    "EMBED_TITLE": "機器人可用命令",
+    "EMBED_DESCRIPTION": "以下是目前可用的命令",
+    "CARD_FIELD_NAME": "^card <ID>",
+    "CARD_FIELD_DESC": "顯示卡面資訊",
+    "CHAR_FIELD_NAME": "^char <ID>",
+    "CHAR_FIELD_DESC": "顯示角色資訊",
+    "EVENT_FIELD_NAME": "^event <ID>",
+    "EVENT_FIELD_DESC": "顯示活動資訊",
+    "GACHA_FIELD_NAME": "^gacha <ID>",
+    "GACHA_FIELD_DESC": "顯示卡池資訊",
+    "SONG_FIELD_NAME": "^song <ID>",
+    "SONG_FIELD_DESC": "顯示樂譜資訊",
+    "HELP_FIELD_NAME": "^help",
+    "HELP_FIELD_DESC": "顯示此幫助消息",
+    "LANG_FIELD_NAME": "/lang",
+    "LANG_FIELD_DESC": "設定此機器人所使用的語言及提取的資訊語言",
+    "FOOTER": "當前版本：{VERSION}"
+  },
+  "lang": {
+    "NO_ADMIN": "❌ 你需要伺服器管理員權限以更新此機器人在這裡使用的語言。\n-# 你可以私訊此 Bot 以使用其他語言",
+    "CONFIRM_GUILD": "✅ 伺服器語言已設定為**{LANG}**。",
+    "CONFIRM_USER": "✅ 您的私訊語言已設定為**{LANG}**。",
+    "UNKNOWN_ERROR": "❌ 發生未知錯誤，請稍後再試。"
+  }
+}
