@@ -59,7 +59,7 @@ This Discord bot provides card, character, event, gacha, and song information fr
 
   * The bot can handle raw chinese as commands, where
     * `查卡`->`^card`  
-      没错，可以复刻`查卡947`（
+      没错，可以复刻`查卡 947`（
     * `角色`->`char`
     * `活动`->`event`
     * `卡池`->`gacha`
@@ -87,7 +87,7 @@ This Discord bot provides card, character, event, gacha, and song information fr
 1. **Clone or Download** this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/bang-dream-discord-bot.git
+   git clone https://github.com/aosumi-rena/Bestdori-Discord-Bot.git
    cd bang-dream-discord-bot
    ```
 
