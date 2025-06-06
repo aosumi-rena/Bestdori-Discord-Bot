@@ -1,4 +1,4 @@
 discord
 asyncio
 pathlib
-bestdori
+bestdori-api
