@@ -4,6 +4,8 @@
     "EMBED_TITLE": "Card #{CARD_ID}",
     "FIELD_TITLE": "Title",
     "FIELD_CHARACTER": "Character",
+    "FIELD_TRAINING": "Training",
+    "NOT_TRAINABLE": "This card cannot be trained.",
     "NOT_FOUND": "Card with ID {CARD_ID} does not exist.",
     "ERROR": "Error fetching card data, please try again later\n{ERROR}"
   },

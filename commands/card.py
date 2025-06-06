@@ -56,14 +56,16 @@ class CardCog(commands.Cog):
 
             card_image_normal = None
             card_image_after = None
+            can_train = True
             try:
                 card_image_normal = await card.get_card_async('normal')
-            except bestdori.exceptions.NotExistException:
+            except (bestdori.exceptions.NotExistException, bestdori.exceptions.AssetsException):
                 card_image_normal = None
             try:
                 card_image_after = await card.get_card_async('after_training')
-            except bestdori.exceptions.NotExistException:
+            except (bestdori.exceptions.NotExistException, bestdori.exceptions.AssetsException):
                 card_image_after = None
+                can_train = False
 
             title_text = get_text(lang, "card", "EMBED_TITLE", CARD_ID=card_id)
             embed = discord.Embed(title=title_text, color=0x00ff00)
@@ -93,6 +95,13 @@ class CardCog(commands.Cog):
                 embed.add_field(
                     name=get_text(lang, "card", "FIELD_CHARACTER"),
                     value="N/A",
+                    inline=False
+                )
+
+            if not can_train:
+                embed.add_field(
+                    name=get_text(lang, "card", "FIELD_TRAINING"),
+                    value=get_text(lang, "card", "NOT_TRAINABLE"),
                     inline=False
                 )
 
