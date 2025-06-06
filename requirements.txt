@@ -1,5 +1,4 @@
 discord
 asyncio
 pathlib
-io
 bestdori
