@@ -4,6 +4,8 @@
     "EMBED_TITLE": "卡面 #{CARD_ID}",
     "FIELD_TITLE": "标题",
     "FIELD_CHARACTER": "角色",
+    "FIELD_TRAINING": "特训",
+    "NOT_TRAINABLE": "此卡没有特训立绘。",
     "NOT_FOUND": "ID为{CARD_ID}的卡面不存在！",
     "ERROR": "获取卡面信息时出错，请稍后再试\n{ERROR}"
   },

@@ -4,6 +4,8 @@
     "EMBED_TITLE": "カード #{CARD_ID}",
     "FIELD_TITLE": "タイトル",
     "FIELD_CHARACTER": "キャラクター",
+    "FIELD_TRAINING": "特訓",
+    "NOT_TRAINABLE": "このカードには特訓後イラストがありません。",
     "NOT_FOUND": "IDが{CARD_ID}のカードは存在しません。",
     "ERROR": "カード情報の取得中にエラーが発生しました。後ほどお試しください\n{ERROR}"
   },
