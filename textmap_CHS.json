@@ -37,7 +37,7 @@
   },
   "lang": {
     "NO_ADMIN": "❌ 你需要伺服器管理员权限以更新此机器人在这里使用的语言。\n-# 你可以私信此Bot使用其他语言",
-    "CONFIRM_GUILD": "✅ 私服器语言已设为**{LANG}**。",
+    "CONFIRM_GUILD": "✅ 伺服器语言已设为**{LANG}**。",
     "CONFIRM_USER": "✅ 您的私信语言已设为**{LANG}**。",
     "UNKNOWN_ERROR": "❌ 出现未知错误，请稍后再试。"
   }
