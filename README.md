@@ -2,6 +2,8 @@
 
 This Discord bot provides card, character, event, gacha, and song information from the BanG Dream! mobile game, using the [Bestdori API](https://github.com/WindowsSov8forUs/bestdori-api). It supports multiple languages (ENG, CHS, CHT, JPN, KOR) and allows per-guild or per-user language selection via a `/lang` slash command.
 
+You can try out this bot with the [official build](https://discord.com/oauth2/authorize?client_id=1379604373491154964). (Slightly outdated due to lack of testing for new versions)
+
 ---
 
 ## Table of Contents
