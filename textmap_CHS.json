@@ -18,7 +18,7 @@
   },
   "help": {
     "EMBED_TITLE": "机器人可用命令",
-    "EMBED_DESCRIPTION": "以下为目前可用的命令",
+    "EMBED_DESCRIPTION": "以下为目前可用的命令\n -# （ID前添加pjsk以查看Project Sekai的数据 | 例：查看晓山瑞希的角色信息可使用命令 `^char pjsk20`）",
     "CARD_FIELD_NAME": "^card <ID>",
     "CARD_FIELD_DESC": "显示卡面信息",
     "CHAR_FIELD_NAME": "^char <ID>",
