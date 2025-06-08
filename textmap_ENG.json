@@ -18,7 +18,7 @@
   },
   "help": {
     "EMBED_TITLE": "Bot Commands",
-    "EMBED_DESCRIPTION": "Here are the commands you can use:\n -# Add `pjsk` before the ID to view Project Sekai data | Example: use `^char pjsk20` to look up Akiyama Mizuki's profile",
+    "EMBED_DESCRIPTION": "Here are the commands you can use (Add `pjsk` before the ID to view Project Sekai data | Example: use `^char pjsk20` to look up Akiyama Mizuki's profile):",
     "CARD_FIELD_NAME": "^card <ID>",
     "CARD_FIELD_DESC": "Show card information.",
     "CHAR_FIELD_NAME": "^char <ID>",

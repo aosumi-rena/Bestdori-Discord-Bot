@@ -18,7 +18,7 @@
   },
   "help": {
     "EMBED_TITLE": "機器人可用命令",
-    "EMBED_DESCRIPTION": "以下是目前可用的命令\n -# （在ID前加上pjsk以查看Project Sekai資料 | 例：查詢曉山瑞希的角色資訊可使用指令 `^char pjsk20`）",
+    "EMBED_DESCRIPTION": "以下是目前可用的命令（在ID前加上pjsk以查看Project Sekai資料 | 例：查詢曉山瑞希的角色資訊可使用指令 `^char pjsk20`）",
     "CARD_FIELD_NAME": "^card <ID>",
     "CARD_FIELD_DESC": "顯示卡面資訊",
     "CHAR_FIELD_NAME": "^char <ID>",
