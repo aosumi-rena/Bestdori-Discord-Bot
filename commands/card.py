@@ -10,6 +10,9 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 import io
+import json
+import re
+import aiohttp
 import discord
 from discord.ext import commands
 
@@ -28,13 +31,64 @@ _lang_to_index = {
     "KOR": 4
 }
 
+_repo_map = {
+    "ENG": "sekai-master-db-en-diff",
+    "JPN": "sekai-master-db-diff",
+    "CHS": "sekai-master-db-cn-diff",
+    "CHT": "sekai-master-db-tc-diff",
+    "KOR": "sekai-master-db-kr-diff",
+}
 
 class CardCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
+    # PJSK section, fetched from sekai viewer's github
+    async def _get_pjsk_card(self, card_id: int, lang: str) -> dict:
+        repo = _repo_map.get(lang, "sekai-master-db-en-diff")
+        base = f"https://raw.githubusercontent.com/Sekai-World/{repo}/main"
+
+        async with aiohttp.ClientSession() as session:
+            async with session.get(f"{base}/cards.json") as resp:
+                cards = await resp.json(content_type=None)
+            async with session.get(f"{base}/gameCharacters.json") as resp:
+                chars = await resp.json(content_type=None)
+
+            card = next((c for c in cards if c.get("id") == card_id), None)
+            if not card:
+                raise ValueError("Card not found")
+
+            char = next((c for c in chars if c.get("id") == card.get("characterId")), None)
+            if char:
+                char_name = f"{char.get('firstName', '')} {char.get('givenName', '')}".strip()
+            else:
+                char_name = "N/A"
+
+            base_img = (
+                f"https://storage.sekai.best/sekai-jp-assets/character/member/{card['assetbundleName']}"
+            )
+            normal_url = f"{base_img}/card_normal.png"
+            after_url = f"{base_img}/card_after_training.png"
+
+            async with session.get(normal_url) as img_resp:
+                normal_bytes = await img_resp.read() if img_resp.status == 200 else None
+
+            after_bytes = None
+            if card.get("cardRarityType") not in ("rarity_1", "rarity_2"):
+                async with session.get(after_url) as img_resp:
+                    if img_resp.status == 200:
+                        after_bytes = await img_resp.read()
+
+        return {
+            "title": card.get("prefix", "N/A"),
+            "character": char_name,
+            "normal": normal_bytes,
+            "after": after_bytes,
+        }
+    
+
     @commands.command(name='card', aliases=['check_card', 'card_check'])
-    async def card(self, ctx: commands.Context, card_id: int = None):
+    async def card(self, ctx: commands.Context, card_id: str = None):
         if ctx.guild:
             lang = language_settings["guild"].get(str(ctx.guild.id), "ENG")
         else:
@@ -48,6 +102,46 @@ class CardCog(commands.Cog):
             return
 
         try:
+            if isinstance(card_id, str) and card_id.lower().startswith("pjsk"):
+                pjsk_id = card_id[4:]
+                if not pjsk_id.isdigit():
+                    raise ValueError("Invalid pjsk card id")
+                card_data = await self._get_pjsk_card(int(pjsk_id), lang)
+
+                title_text = get_text(lang, "card", "EMBED_TITLE", CARD_ID=pjsk_id)
+                embed = discord.Embed(title=title_text, color=0x00ff00)
+                embed.add_field(
+                    name=get_text(lang, "card", "FIELD_TITLE"),
+                    value=card_data.get("title", "N/A"),
+                    inline=False,
+                )
+                embed.add_field(
+                    name=get_text(lang, "card", "FIELD_CHARACTER"),
+                    value=card_data.get("character", "N/A"),
+                    inline=False,
+                )
+
+                files = []
+                if card_data.get("normal"):
+                    files.append(
+                        discord.File(
+                            io.BytesIO(card_data["normal"]),
+                            filename=f"pjsk_{pjsk_id}_normal.png",
+                        )
+                    )
+                if card_data.get("after"):
+                    files.append(
+                        discord.File(
+                            io.BytesIO(card_data["after"]),
+                            filename=f"pjsk_{pjsk_id}_after.png",
+                        )
+                    )
+
+                await ctx.reply(embed=embed, files=files)
+                return
+            
+ 
+            card = bestdori.cards.Card(int(card_id))
             card = bestdori.cards.Card(card_id)
             card_info = await card.get_info_async()
 
@@ -59,15 +153,17 @@ class CardCog(commands.Cog):
             can_train = True
             try:
                 card_image_normal = await card.get_card_async('normal')
-            except (bestdori.exceptions.NotExistException, bestdori.exceptions.AssetsException):
+
+            except Exception:
                 card_image_normal = None
             try:
                 card_image_after = await card.get_card_async('after_training')
-            except (bestdori.exceptions.NotExistException, bestdori.exceptions.AssetsException):
+        
+            except Exception:
                 card_image_after = None
                 can_train = False
 
-            title_text = get_text(lang, "card", "EMBED_TITLE", CARD_ID=card_id)
+            title_text = get_text(lang, "card", "EMBED_TITLE", CARD_ID=int(card_id))
             embed = discord.Embed(title=title_text, color=0x00ff00)
 
             prefix = card_info.get('prefix', [])
