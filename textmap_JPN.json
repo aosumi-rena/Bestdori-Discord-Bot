@@ -18,7 +18,7 @@
   },
   "help": {
     "EMBED_TITLE": "ボットコマンド",
-"EMBED_DESCRIPTION": "使用可能なコマンド一覧：\n -# IDの前にpjskを付けるとプロセカのデータを表示します | 例：暁山瑞希のキャラ情報は `^char pjsk20`",
+    "EMBED_DESCRIPTION": "使用可能なコマンド一覧（IDの前にpjskを付けるとプロセカのデータを表示します | 例：暁山瑞希のキャラ情報は `^char pjsk20`）：",
     "CARD_FIELD_NAME": "^card <ID>",
     "CARD_FIELD_DESC": "カード情報を表示します。",
     "CHAR_FIELD_NAME": "^char <ID>",
