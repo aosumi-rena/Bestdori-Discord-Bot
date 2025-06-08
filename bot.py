@@ -7,7 +7,7 @@ from pathlib import Path
 
 # ── Bot configuration ───────────────────────────────────────────────────────────
 TOKEN = "<DISCORD_BOT_TOKEN>"
-VERSION = "CHU³-0.0.3"
+VERSION = "CHU³-Beta-0.1.50"
 # ────────────────────────────────────────────────────────────────────────────────
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
