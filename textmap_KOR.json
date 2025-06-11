@@ -12,7 +12,7 @@
   "character": {
     "USAGE": "캐릭터 ID를 입력해주세요 | 사용법: `^char <캐릭터ID>`",
     "EMBED_TITLE": "캐릭터 #{CHAR_ID}: {NAME}",
-    "FIELD_BAND": "밴드",
+    "FIELD_BAND": "속하다",
     "NOT_FOUND": "ID가 {CHAR_ID}인 캐릭터를 찾을 수 없습니다.",
     "ERROR": "캐릭터 정보를 가져오는 중 오류가 발생했습니다\n{ERROR}"
   },
