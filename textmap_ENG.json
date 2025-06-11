@@ -12,7 +12,7 @@
   "character": {
     "USAGE": "Please provide a character ID | Usage: `^char <charID>`",
     "EMBED_TITLE": "Character #{CHAR_ID}: {NAME}",
-    "FIELD_BAND": "Band",
+    "FIELD_BAND": "Belongs to",
     "NOT_FOUND": "Character with ID {CHAR_ID} does not exist.",
     "ERROR": "Error fetching char data: {ERROR}"
   },
