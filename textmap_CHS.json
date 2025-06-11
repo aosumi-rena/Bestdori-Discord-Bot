@@ -12,7 +12,7 @@
   "character": {
     "USAGE": "请提供角色ID | 用法: `^char <角色ID>`",
     "EMBED_TITLE": "角色 #{CHAR_ID}: {NAME}",
-    "FIELD_BAND": "所属乐队",
+    "FIELD_BAND": "所属",
     "NOT_FOUND": "ID为{CHAR_ID}的角色不存在！",
     "ERROR": "获取角色信息时出错，请稍后再试\n{ERROR}"
   },
