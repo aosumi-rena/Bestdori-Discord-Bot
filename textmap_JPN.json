@@ -12,7 +12,7 @@
   "character": {
     "USAGE": "キャラクターIDを提供してください | 使い方：`^char <キャラクターID>`",
     "EMBED_TITLE": "キャラクター #{CHAR_ID}：{NAME}",
-    "FIELD_BAND": "バンド",
+    "FIELD_BAND": "所属する",
     "NOT_FOUND": "IDが{CHAR_ID}のキャラクターは存在しません。",
     "ERROR": "キャラクター情報の取得中にエラーが発生しました\n{ERROR}"
   },
