@@ -40,5 +40,14 @@
     "CONFIRM_GUILD": "✅ Server language has been updated to **{LANG}**.",
     "CONFIRM_USER": "✅ Your preferred language has been set to **{LANG}**.",
     "UNKNOWN_ERROR": "❌ An unknown error occurred, try again later."
+  },
+  "gacha": {
+    "USAGE": "Please provide a gacha ID | Usage: `^gacha <gachaID>`",
+    "EMBED_TITLE": "Gacha #{GACHA_ID}",
+    "FIELD_NAME": "Name",
+    "FIELD_PERIOD": "Period",
+    "FIELD_PICKUPS": "Pickups",
+    "NOT_FOUND": "Gacha with ID {GACHA_ID} does not exist.",
+    "ERROR": "Error fetching gacha data, please try again later\n{ERROR}"
   }
 }
