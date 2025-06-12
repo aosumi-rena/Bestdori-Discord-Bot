@@ -40,5 +40,14 @@
     "CONFIRM_GUILD": "✅ サーバーの言語が**{LANG}**に更新されました。",
     "CONFIRM_USER": "✅ あなたの言語設定が**{LANG}**に設定されました。",
     "UNKNOWN_ERROR": "❌ 不明なエラーが発生しました。後ほどお試しください。"
+  },
+  "gacha": {
+    "USAGE": "ガチャIDを入力してください | 使い方：`^gacha <ガチャID>`",
+    "EMBED_TITLE": "ガチャ #{GACHA_ID}",
+    "FIELD_NAME": "名称",
+    "FIELD_PERIOD": "期間",
+    "FIELD_PICKUPS": "ピックアップ",
+    "NOT_FOUND": "IDが{GACHA_ID}のガチャは存在しません。",
+    "ERROR": "ガチャ情報の取得中にエラーが発生しました\n{ERROR}"
   }
 }

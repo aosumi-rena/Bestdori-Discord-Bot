@@ -40,5 +40,14 @@
     "CONFIRM_GUILD": "✅ 伺服器语言已设为**{LANG}**。",
     "CONFIRM_USER": "✅ 您的私信语言已设为**{LANG}**。",
     "UNKNOWN_ERROR": "❌ 出现未知错误，请稍后再试。"
+  },
+  "gacha": {
+    "USAGE": "請提供卡池ID | 用法：`^gacha <卡池ID>`",
+    "EMBED_TITLE": "卡池 #{GACHA_ID}",
+    "FIELD_NAME": "名稱",
+    "FIELD_PERIOD": "期間",
+    "FIELD_PICKUPS": "PickUp",
+    "NOT_FOUND": "ID為{GACHA_ID}的卡池不存在！",
+    "ERROR": "獲取卡池資訊時出錯，請稍後再試\n{ERROR}"
   }
 }

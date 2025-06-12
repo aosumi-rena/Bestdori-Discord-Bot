@@ -19,8 +19,9 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
   * [`/lang` Command](#lang-command)
   * `^card <ID>`
   * `^char <ID>`
+  * `^gacha <ID>`
   * `^help`
-  * (Future: `^event`, `^gacha`, `^song`)
+  * (Future: `^event`, `^song`)
 * [Localization](#localization)
 
   * [Language Settings Storage](#language-settings-storage)
@@ -41,6 +42,10 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
 * **Character Lookup** (`^char <ID>`)
 
   * Displays a single‐language character name, band name, and character icon.
+
+* **Gacha Lookup** (`^gacha <ID>`)
+
+  * Displays information about a gacha banner.
 
 * **Help Menu** (`^help`)
 
@@ -213,6 +218,20 @@ Fetches and displays information about a character.
   * Attaches the character’s icon image.
   * Replies localized usage, embed title, field name, “not found,” and error messages.
 
+### `^gacha <ID>`
+
+Fetches and displays information about a gacha.
+
+```
+^gacha 100
+```
+
+* **Features**:
+
+  * Shows the gacha name.
+  * Displays the event period if available.
+  * Attaches the banner image when possible.
+
 ### `^help`
 
 Shows an embed listing all available commands and their descriptions.
@@ -227,7 +246,7 @@ Shows an embed listing all available commands and their descriptions.
   * All field names and descriptions are pulled from the active language’s textmap.
   * Footer shows the bot’s version.
 
-> **Note**: Future commands for events, gacha, and songs can be added using the same pattern. Each new command should read from the appropriate textmap section.
+> **Note**: Future commands for events and songs can be added using the same pattern. Each new command should read from the appropriate textmap section..
 
 ---
 
@@ -325,7 +344,8 @@ The textmap can be hot fixed, i.e. whenever the text is edited, it will reflect 
    ├─ card.py                # ^card command (single‐language title + images)
    ├─ character.py           # ^char command (single‐language name + icon)
    ├─ help.py                # ^help command (lists available commands)
-   └─ (future: event.py, gacha.py, song.py, etc.)
+   ├─ gacha.py               # ^gacha command (gacha banners)
+   └─ (future: event.py, song.py, etc.)
 ```
 
 ---
