@@ -7,15 +7,12 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
 ---
 
 ## Table of Contents
-
 * [Features](#features)
 * [Getting Started](#getting-started)
-
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
   * [Configuration](#configuration)
 * [Commands & Usage](#commands--usage)
-
   * [`/lang` Command](#lang-command)
   * `^card <ID>`
   * `^char <ID>`
@@ -23,7 +20,6 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
   * `^help`
   * (Future: `^event`, `^song`)
 * [Localization](#localization)
-
   * [Language Settings Storage](#language-settings-storage)
   * [Adding or Editing Textmaps](#adding-or-editing-textmaps)
 * [Project Structure](#project-structure)
@@ -34,36 +30,22 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
 ---
 
 ## Features
-
 * **Card Lookup** (`^card <ID>`)
-
   * Shows a single‐language card title and character name, plus attaches full "normal" and "after-training" card images.
-
 * **Character Lookup** (`^char <ID>`)
-
   * Displays a single‐language character name, band name, and character icon.
-
 * **Gacha Lookup** (`^gacha <ID>`)
-
   * Displays information about a gacha banner.
-
 * **Help Menu** (`^help`)
-
   * Lists all available commands and usage instructions, localized.
-
 * **Slash Command for Language** (`/lang <code>`)
-
   * Allows per-guild or per-user language selection (ENG, CHS, CHT, JPN, KOR).
   * Guild setting can only be changed by administrators; DM setting can be changed by any user.
-
 * **Localization**
-
   * All bot messages (usage hints, embed titles, field names, error messages) are stored in external JSON textmaps (`textmap_<LANG>.json`).
   * By default, responses appear in English.
   * Adding or updating textmaps for other languages is straightforward.
-
 * **Raw Command Handling**
-
   * The bot can handle raw chinese as commands, where
     * `查卡`->`^card`  
       没错，可以复刻`查卡 947`（
@@ -72,12 +54,8 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
     * `卡池`->`gacha`
     * `查谱`->`song`
     * `帮助`->`help`
-
-
 * **Bestdori API Integration**
-
   * Uses the [Bestdori API](https://github.com/WindowsSov8forUs/bestdori-api) to fetch game data (cards, characters, etc.) in the requested language only.
-
 ---
 
 ## Getting Started
