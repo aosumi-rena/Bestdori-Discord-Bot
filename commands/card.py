@@ -15,6 +15,7 @@ import re
 import aiohttp
 import discord
 from discord.ext import commands
+from discord import app_commands
 
 import bestdori.cards
 import bestdori.characters
@@ -87,8 +88,13 @@ class CardCog(commands.Cog):
         }
     
 
-    @commands.command(name='card', aliases=['check_card', 'card_check'])
-    async def card(self, ctx: commands.Context, card_id: str = None):
+    @commands.hybrid_command(
+        name="card",
+        aliases=["check_card", "card_check"],
+        description="Look up a card by ID",
+    )
+    @app_commands.describe(card_id="Card ID or 'pjsk' prefixed ID")
+    async def card(self, ctx: commands.Context, card_id: str | None = None):
         if ctx.guild:
             lang = language_settings["guild"].get(str(ctx.guild.id), "ENG")
         else:

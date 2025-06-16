@@ -11,6 +11,7 @@
 
 import discord
 from discord.ext import commands
+from discord import app_commands
 
 from lang_settings import language_settings
 from localisation import get_text
@@ -19,7 +20,7 @@ class HelpCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    @commands.command(name='help')
+    @commands.hybrid_command(name="help", description="Show help information")
     async def help(self, ctx: commands.Context):
         if ctx.guild:
             lang = language_settings["guild"].get(str(ctx.guild.id), "ENG")
