@@ -156,7 +156,14 @@ class GachaCog(commands.Cog):
                 banner_bytes = None
 
             names = info.get("gachaName", [])
-            name = names[idx] if len(names) > idx and names[idx] else next((n for n in names if n), "N/A")
+            if len(names) > idx and names[idx]:
+                name = names[idx]
+            else:
+                name = "N/A"
+                for n in names:
+                    if n:
+                        name = n
+                        break
 
             start_list = info.get("publishedAt", [])
             end_list = info.get("closedAt", [])
@@ -164,12 +171,20 @@ class GachaCog(commands.Cog):
             if len(start_list) > idx and start_list[idx]:
                 start = start_list[idx]
             else:
-                start = next((s for s in start_list if s), None)
+                start = None
+                for s in start_list:
+                    if s:
+                        start = s
+                        break
 
             if len(end_list) > idx and end_list[idx]:
                 end = end_list[idx]
             else:
-                end = next((e for e in end_list if e), None)
+                end = None
+                for e in end_list:
+                    if e:
+                        end = e
+                        break
             start_str = start[:10] if isinstance(start, str) else str(start)
             end_str = end[:10] if isinstance(end, str) else str(end)
 
