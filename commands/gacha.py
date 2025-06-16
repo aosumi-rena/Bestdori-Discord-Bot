@@ -14,6 +14,7 @@ import datetime
 import aiohttp
 import discord
 from discord.ext import commands
+from discord import app_commands
 
 import bestdori.gacha
 import bestdori.cards
@@ -92,8 +93,12 @@ class GachaCog(commands.Cog):
             "pickups": pickups,
         }
 
-    @commands.command(name="gacha")
-    async def gacha(self, ctx: commands.Context, gacha_id: str = None):
+    @commands.hybrid_command(
+        name="gacha",
+        description="Look up a gacha by ID",
+    )
+    @app_commands.describe(gacha_id="Gacha ID or 'pjsk' prefixed ID")
+    async def gacha(self, ctx: commands.Context, gacha_id: str | None = None):
         if ctx.guild:
             lang = language_settings["guild"].get(str(ctx.guild.id), "ENG")
         else:
@@ -155,8 +160,16 @@ class GachaCog(commands.Cog):
 
             start_list = info.get("publishedAt", [])
             end_list = info.get("closedAt", [])
-            start = next((start_list[idx], *start_list), None)
-            end = next((end_list[idx], *end_list), None)
+
+            if len(start_list) > idx and start_list[idx]:
+                start = start_list[idx]
+            else:
+                start = next((s for s in start_list if s), None)
+
+            if len(end_list) > idx and end_list[idx]:
+                end = end_list[idx]
+            else:
+                end = next((e for e in end_list if e), None)
             start_str = start[:10] if isinstance(start, str) else str(start)
             end_str = end[:10] if isinstance(end, str) else str(end)
 

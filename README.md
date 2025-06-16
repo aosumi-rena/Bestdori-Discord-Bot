@@ -14,10 +14,10 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
   * [Configuration](#configuration)
 * [Commands & Usage](#commands--usage)
   * [`/lang` Command](#lang-command)
-  * `^card <ID>`
-  * `^char <ID>`
-  * `^gacha <ID>`
-  * `^help`
+  * `^card`/`/card`
+  * `^char`/`/character`
+  * `^gacha`/`/gacha`
+  * `^help`/`/help`
   * (Future: `^event`, `^song`)
 * [Localization](#localization)
   * [Language Settings Storage](#language-settings-storage)
@@ -30,13 +30,13 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
 ---
 
 ## Features
-* **Card Lookup** (`^card <ID>`)
+* **Card Lookup** (`^card` or `/card`)
   * Shows a single‐language card title and character name, plus attaches full "normal" and "after-training" card images.
-* **Character Lookup** (`^char <ID>`)
+* **Character Lookup** (`^char` or `/character`)
   * Displays a single‐language character name, band name, and character icon.
-* **Gacha Lookup** (`^gacha <ID>`)
+* **Gacha Lookup** (`^gacha` or `/gacha`)
   * Displays information about a gacha banner.
-* **Help Menu** (`^help`)
+* **Help Menu** (`^help` or `/help`)
   * Lists all available commands and usage instructions, localized.
 * **Slash Command for Language** (`/lang <code>`)
   * Allows per-guild or per-user language selection (ENG, CHS, CHT, JPN, KOR).
@@ -166,12 +166,12 @@ Changes the bot’s language. Usage:
 * **DM Context**:
   Any user may run `/lang <code>` in a DM. This sets their personal language for DM‐only interactions.
 
-### `^card <ID>`
+### `^card <ID>` or `/card <ID>`
 
 Fetches and displays information about a card.
 
 ```
-^card 947
+/card 947
 ```
 
 * **Features**:
@@ -181,12 +181,12 @@ Fetches and displays information about a card.
   * Attaches both the “normal” and “after-training” full-size card images.
   * Replies localized usage, embed title, field names, “not found,” and error messages.
 
-### `^char <ID>`
+### `^char <ID>` or `/character <ID>`
 
 Fetches and displays information about a character.
 
 ```
-^char 35
+/character 35
 ```
 
 * **Features**:
@@ -196,12 +196,12 @@ Fetches and displays information about a character.
   * Attaches the character’s icon image.
   * Replies localized usage, embed title, field name, “not found,” and error messages.
 
-### `^gacha <ID>`
+### `^gacha <ID>` or `/gacha <ID>`
 
 Fetches and displays information about a gacha.
 
 ```
-^gacha 100
+/gacha 100
 ```
 
 * **Features**:
@@ -210,17 +210,17 @@ Fetches and displays information about a gacha.
   * Displays the event period if available.
   * Attaches the banner image when possible.
 
-### `^help`
+### `^help` or `/help`
 
 Shows an embed listing all available commands and their descriptions.
 
 ```
-^help
+/help
 ```
 
 * **Features**:
 
-  * Lists every command (`^card`, `^char`, `^event`, `^gacha`, `^song`, `^help`, `/lang`) with usage and short description.
+  * Lists every command (`^card`/`/card`, `^char`/`/character`, `^event`, `^gacha`/`/gacha`, `^song`, `^help`/`/help`, `/lang`) with usage and short description.
   * All field names and descriptions are pulled from the active language’s textmap.
   * Footer shows the bot’s version.
 
