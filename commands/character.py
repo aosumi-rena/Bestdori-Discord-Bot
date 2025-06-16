@@ -13,6 +13,7 @@ import io
 import aiohttp
 import discord
 from discord.ext import commands
+from discord import app_commands
 
 import bestdori.characters
 import bestdori.bands
@@ -65,8 +66,13 @@ class CharacterCog(commands.Cog):
 
         return {"name": name, "band": unit_name, "image": image_url}
 
-    @commands.command(name='character', aliases=['char'])
-    async def character(self, ctx: commands.Context, char_id: str = None):
+    @commands.hybrid_command(
+        name="character",
+        aliases=["char"],
+        description="Look up a character by ID",
+    )
+    @app_commands.describe(char_id="Character ID or 'pjsk' prefixed ID")
+    async def character(self, ctx: commands.Context, char_id: str | None = None):
 
         if ctx.guild:
             lang = language_settings["guild"].get(str(ctx.guild.id), "ENG")
