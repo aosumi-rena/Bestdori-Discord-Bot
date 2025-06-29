@@ -11,7 +11,6 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-  * [Configuration](#configuration)
 * [Commands & Usage](#commands--usage)
   * [`/lang` Command](#lang-command)
   * `^card`/`/card`
@@ -118,28 +117,6 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
 
 ---
 
-## Configuration
-
-### `language_settings.json`
-
-After the first run, you will have a file named `language_settings.json`. Its initial contents look like:
-
-```json
-{
-  "guild": {},
-  "user": {}
-}
-```
-
-* **guild**: Maps guild (server) IDs to language codes.
-* **user**: Maps user IDs (for DMs) to language codes.
-
-Whenever someone in a server with Administrator permission runs `/lang <code>`, that guild’s ID and chosen code are stored here. Commands in that guild will then respond in that language. If a user runs `/lang <code>` in a direct message, their user ID and code are stored here.
-
-You should not edit `language_settings.json` by hand—using `/lang` ensures format consistency—but you can if needed. Just follow the same JSON structure.
-
----
-
 ## Commands & Usage
 
 Below is a brief overview of the bot commands. All text shown is localized based on the per-guild or per-user language setting.
@@ -232,24 +209,21 @@ Shows an embed listing all available commands and their descriptions.
 
 ### Language Settings Storage
 
-* **File**: `language_settings.json`
-* **Structure**:
+After the first run, you will have a file named `language_settings.json`. Its initial contents look like:
 
-  ```json
-  {
-    "guild": {
-      "123456789012345678": "JPN",
-      "234567890123456789": "CHS"
-    },
-    "user": {
-      "111111111111111111": "CHS",
-      "222222222222222222": "ENG"
-    }
-  }
-  ```
+```json
+{
+  "guild": {},
+  "user": {}
+}
+```
 
-  * `"guild"` maps guild IDs (strings) to their chosen language.
-  * `"user"` maps user IDs (strings) to their chosen language (for DMs).
+* **guild**: Maps guild (server) IDs to language codes.
+* **user**: Maps user IDs (for DMs) to language codes.
+
+Whenever someone in a server with Administrator permission runs `/lang <code>`, that guild’s ID and chosen code are stored here. Commands in that guild will then respond in that language. If a user runs `/lang <code>` in a direct message, their user ID and code are stored here.
+
+You should not edit `language_settings.json` manually, using `/lang` ensures format consistency—but you can if needed. Just follow the same JSON structure.
 
 ### Adding or Editing Textmaps
 
