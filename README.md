@@ -13,10 +13,10 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
   * [Installation](#installation)
 * [Commands & Usage](#commands--usage)
   * [`/lang` Command](#lang-command)
-  * `^card`/`/card`
-  * `^char`/`/character`
-  * `^gacha`/`/gacha`
-  * `^help`/`/help`
+  * [`^card`/`/card`](#card-id-or-card-id)
+  * [`^char`/`/character`](#char-id-or-character-id)
+  * [`^gacha`/`/gacha`](#gacha-id-or-gacha-id)
+  * [`^help`/`/help`](#help-or-help)
   * (Future: `^event`, `^song`)
 * [Localization](#localization)
   * [Language Settings Storage](#language-settings-storage)
