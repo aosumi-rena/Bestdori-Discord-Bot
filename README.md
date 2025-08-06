@@ -72,7 +72,7 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
 
    ```bash
    git clone https://github.com/aosumi-rena/Bestdori-Discord-Bot.git
-   cd bang-dream-discord-bot
+   cd Bestdori-Discord-Bot
    ```
 
 2. **Create a Virtual Environment** (recommended) and activate it:
@@ -91,10 +91,10 @@ You can try out this bot with the [official build](https://discord.com/oauth2/au
    pip install -r requirements.txt
    ```
 
-   *If you don’t have a `requirements.txt`, install manually:*
+   *Or install manually:*
 
    ```bash
-   pip install discord.py bestdori-api typing-extensions
+   pip install discord.py bestdori-api typing-extensions asyncio pathlib aiohttp
    ```
 
 4. **Edit `bot.py`**:
